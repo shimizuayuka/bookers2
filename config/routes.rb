@@ -8,7 +8,7 @@ root to: 'homes#top'
 # resources :post_images, only: [:new, :create, :index, :show, :destroy] do
 resources :books, only: [:top, :new, :create, :index, :show, :edit, :update, :destroy] do
 resource :favorites, only: [:create, :destroy]
-resources :post_comments, only: [:create, :destroy]
+resources :book_comments, only: [:create, :destroy]
 end
 
 # resources :books, only: [:top, :new, :create, :index, :show, :edit, :update, :destroy]
