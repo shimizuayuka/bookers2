@@ -25,12 +25,17 @@ class BooksController < ApplicationController
     @books = Book.all
     @user = current_user
     @book = Book.new
+
   end
 
   def show
     @book = Book.find(params[:id])
     @user = @book.user
     @new_book = Book.new
+    @post_comment = PostComment.new
+    # if @user = current_user
+    #   redirect_to book_path
+    # end
   end
 
   def edit
